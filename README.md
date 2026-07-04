@@ -1,19 +1,21 @@
-# fable-coding
+# wanyaldee-skills — Wanyaldee's Skills Package
 
-Fable 5のコーディング規律をSkill化し、Sonnet 5などで再現するためのプラグイン。
+Wanyaldee の個人スキルパッケージ。Fable 5級のコーディング規律、開発哲学、Fable 5 プロンプティングリファレンス、メモリ規律+監査、認証情報読み取りブロックのフックを収録。
+
+v1.x までは `fable-coding` という名前だった(旧 URL は GitHub がリダイレクトする)。v2.0.0 で改名。旧名でインストール済みの環境は、`/plugin uninstall fable-coding` → `/plugin marketplace remove fable-coding` → 下記の手順で入れ直す。
 
 ## インストール
 
 Claude Code内で:
 
 ```
-/plugin marketplace add Wanyaldee/fable-coding
-/plugin install fable-coding@fable-coding
+/plugin marketplace add Wanyaldee/wanyaldee-skills
+/plugin install wanyaldee-skills@wanyaldee-skills
 ```
 
 ## 使い方
 
-インストール後、コーディングタスクで `fable-coding` スキルが自動的に候補になる。明示的に使う場合はプロンプトで「fable-codingスキルを使って」と指示する。
+インストール後、各スキルがタスク内容に応じて自動的に候補になる(コーディングタスク→`fable-coding`、設計提案→`dev-philosophy`、メモリ保存→`memory-discipline` 等)。明示的に使う場合はプロンプトでスキル名を指示する。`/memory-audit` はコマンドとして直接呼べる。
 
 ## 収録スキル
 

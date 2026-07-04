@@ -1,13 +1,13 @@
 {
-  "name": "fable-coding",
+  "name": "wanyaldee-skills",
   "owner": {
     "name": "Wanyaldee"
   },
   "plugins": [
     {
-      "name": "fable-coding",
+      "name": "wanyaldee-skills",
       "source": "./",
-      "description": "Fable 5-grade coding discipline as a skill for Sonnet 5."
+      "description": "Wanyaldee's Skills Package: coding discipline, dev philosophy, Fable 5 prompting, memory discipline + audit."
     }
   ]
 }

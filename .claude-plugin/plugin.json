@@ -1,6 +1,6 @@
 {
-  "name": "fable-coding",
-  "description": "Reproduce Fable 5's coding discipline on Sonnet 5: full comprehension, root-cause fixes, minimal idiomatic diffs, verified results.",
-  "version": "1.7.0",
+  "name": "wanyaldee-skills",
+  "description": "Wanyaldee's Skills Package: Fable 5-grade coding discipline, dev philosophy, Fable 5 prompting reference, memory discipline + audit, and a credential read-deny hook.",
+  "version": "2.0.0",
   "hooks": "./hooks/hooks.json"
 }
