@@ -11,8 +11,6 @@ Claude Code内で:
 /plugin install fable-coding@fable-coding
 ```
 
-Privateリポジトリのため、`gh auth login` 済み(または git の GitHub 認証設定済み)の環境が必要。
-
 ## 使い方
 
 インストール後、コーディングタスクで `fable-coding` スキルが自動的に候補になる。明示的に使う場合はプロンプトで「fable-codingスキルを使って」と指示する。
@@ -34,3 +32,7 @@ Privateリポジトリのため、`gh auth login` 済み(または git の GitHu
 - `credentials.json` / `.aws/` 配下
 
 制限: このフックがカバーするのは Read ツールのみ。`cat .env` のような Bash 経由の読み取りまで固めたい場合は、settings.json の `permissions.deny` に `Read(**/.env)` 等を併せて設定する(deny ルールは Bash コマンドにも適用される)。
+
+## License
+
+MIT
