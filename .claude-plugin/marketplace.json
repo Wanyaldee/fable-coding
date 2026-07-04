@@ -1,0 +1,13 @@
+{
+  "name": "fable-coding",
+  "owner": {
+    "name": "Wanyaldee"
+  },
+  "plugins": [
+    {
+      "name": "fable-coding",
+      "source": "./",
+      "description": "Fable 5-grade coding discipline as a skill for Sonnet 5."
+    }
+  ]
+}

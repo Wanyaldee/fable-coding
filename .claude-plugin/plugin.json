@@ -1,0 +1,5 @@
+{
+  "name": "fable-coding",
+  "description": "Reproduce Fable 5's coding discipline on Sonnet 5: full comprehension, root-cause fixes, minimal idiomatic diffs, verified results.",
+  "version": "1.0.0"
+}
