@@ -31,7 +31,7 @@ Claude Code内で:
 
 プラグインを有効化すると PreToolUse フックが自動で登録され、Claude が以下のファイルを Read ツールで読むことを拒否する:
 
-- `.env` / `.env.*`
+- `.env` / `.env.*`(ただし `.env*.example` / `.env*.sample` / `.env*.template` は必要なキー名の把握のため読み取り可、v2.1.0〜)
 - `*.pem` / `id_rsa` / `id_ed25519`
 - `credentials.json` / `.aws/` 配下
 

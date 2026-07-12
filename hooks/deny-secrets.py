@@ -13,6 +13,11 @@ path = data.get("tool_input", {}).get("file_path") or ""
 name = os.path.basename(path)
 posix = path.replace("\\", "/")
 
+# .env templates hold key names, not secret values — readable so Claude
+# can see WHICH secrets a project needs.
+if name.startswith(".env") and name.endswith((".example", ".sample", ".template")):
+    sys.exit(0)
+
 # ponytail: covers the Read tool only; `cat .env` via Bash is not parsed here.
 # Pair with permissions.deny Read(...) rules in settings for Bash coverage.
 if any(fnmatch.fnmatch(name, p) for p in DENY_BASENAMES) or any(
