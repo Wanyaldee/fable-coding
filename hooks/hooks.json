@@ -11,6 +11,17 @@
             "statusMessage": "Checking credential files..."
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/deny-bash.py\"",
+            "timeout": 5,
+            "statusMessage": "Checking command safety..."
+          }
+        ]
       }
     ]
   }

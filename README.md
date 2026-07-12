@@ -35,7 +35,13 @@ Claude Code内で:
 - `*.pem` / `id_rsa` / `id_ed25519`
 - `credentials.json` / `.aws/` 配下
 
-制限: このフックがカバーするのは Read ツールのみ。`cat .env` のような Bash 経由の読み取りまで固めたい場合は、settings.json の `permissions.deny` に `Read(**/.env)` 等を併せて設定する(deny ルールは Bash コマンドにも適用される)。
+加えて Bash 用フック(v2.2.0〜)が以下のコマンドを拒否する:
+
+- `.env` 系ファイルへの言及(テンプレートは除外)— `cat .env` など
+- `rm -rf`(`xargs`/`find -exec` 経由含む)/ `mkfs` / `dd of=/dev/*`
+- DB クライアント直叩き — `mysql` / `mariadb` / `psql` / `sqlite3` / `mongosh` / `redis-cli` / `wrangler d1 execute|migrations apply`。実行するステートメントはユーザーに報告し、ユーザー自身が実行する(fable-coding セクション4の仕組み化)。
+
+制限: 事故防止のガードであり敵対的境界ではない(詳細は ADR 0001 / 0009)。念のため settings.json の `permissions.deny` に `Read(**/.env)` 等を併設しておくとフック無効時の保険になる。
 
 ## License
 
