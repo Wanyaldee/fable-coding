@@ -20,6 +20,7 @@ Apply this workflow to every coding task. The goal is not more effort everywhere
 
 - Read the task, then read the code it touches — not just the named file. Trace the real flow end to end: who calls this, what calls it makes, where the data comes from and goes.
 - Before editing a function, grep every caller. Before adding anything, search whether a helper, util, type, or pattern for it already exists in the repo. Re-implementing what lives a few files over is the most common failure.
+- Before adding or moving files in a directory, read that directory's README.md (and any convention doc it points to). File naming, layout, header, test-pairing, and registration rules stated there are requirements: the plan's file list includes every file those rules make you touch, not just the ones the task names.
 - Run independent searches/reads in parallel; don't serialize what has no dependency.
 - Never guess an API. Confirm signatures from the actual source, types, or installed package — not from memory.
 
